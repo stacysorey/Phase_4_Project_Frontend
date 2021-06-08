@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Cozy Journal</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cozy Journal</title>
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+    
 </head>
 <body>
-    <h1>Welcome to the Cozy Journal</h1>
-    <ul id="journals-container"></ul>
-    <script type="text/javascript" src="src/components/entry.js"></script>
-    <script type="text/javascript" src="src/components/journal.js"></script>
-    <script type="text/javascript" src="src/components/cozyJournalAdapter.js"></script>
-    <script type="text/javascript" src="src/index.js"></script>
+  <div class="window" style="width: 300px">
+    <div class="title-bar">
+      <div class="title-bar-text">Welcome to the Cozy Journal</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <ul id="journals-container"></ul>
+    </div>
+  </div>
+  <script type="text/javascript" src="src/components/entry.js"></script>
+  <script type="text/javascript" src="src/components/journal.js"></script>
+  <script type="text/javascript" src="src/components/cozyJournalAdapter.js"></script>
+  <script type="text/javascript" src="src/index.js"></script> 
 </body>
 </html>
