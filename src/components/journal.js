@@ -11,12 +11,18 @@ class Journal {
 
     Journal.all.push(this)
   }
-}
 
-render() {
-  return(
-    `<li id="journal-${this.id}" journal-id=${this.id}>
-    <span>${this.title}</span>
-    </li>`
-  )
+
+  render() {
+    return (
+      `<li id="journal-${this.id}" journal-id=${this.id}>
+      <span>${this.title}</span>
+      </li>`
+    )
+  }
+
+  addToDom() {
+    const journalsContainer = document.getElementById("journals-container");
+    journalsContainer.innerHTML += this.render()
+  }
 }

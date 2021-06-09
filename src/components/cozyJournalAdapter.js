@@ -20,12 +20,13 @@ class CozyJournalAdapter {
   }
 
   getJournals(){
-    const journalsContainer = document.getElementById("journals-container");
-
+    
     fetch(this.baseJournalURL)
     .then(r => r.json())
     .then(journals => {
-      journals.forEach(journal => {           journalsContainer.innerHTML += `<li>${journal.title}</li>`
+      journals.forEach(journal => {    
+        const j = new Journal(journal) 
+        j.addToDom()      
       })
     })
     .catch(err => console.warn(err))
