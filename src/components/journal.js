@@ -13,3 +13,10 @@ class Journal {
   }
 }
 
+render() {
+  return(
+    `<li id="journal-${this.id}" journal-id=${this.id}>
+    <span>${this.title}</span>
+    </li>`
+  )
+}
