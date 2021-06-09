@@ -11,4 +11,11 @@ class Entry {
 
     Entry.all.push(this)
   }
+
+  render() {
+    return (
+      `<li entry-id=${this.id}><span>${this.title}</span><span>${this.date}</li>`
+      `<li entry-description=${this.description}</li>`
+    )
+  }
 }
