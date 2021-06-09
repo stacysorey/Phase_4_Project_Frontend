@@ -2,6 +2,7 @@
 
 class Journal {
   static all = []
+  
 
   constructor({id, title, entries}){
     this.id = id
@@ -11,3 +12,4 @@ class Journal {
     Journal.all.push(this)
   }
 }
+

@@ -20,6 +20,8 @@ class CozyJournalAdapter {
   }
 
   getJournals(){
+    const journalsContainer = document.getElementById("journals-container");
+
     fetch(this.baseJournalURL)
     .then(r => r.json())
     .then(journals => {
