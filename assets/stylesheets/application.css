@@ -1,19 +1,27 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  
 }
 
 .container {
-  border: 3px solid #f1f1f1;
-  border-radius: 20px;
+  border: 3px solid #b5838D;
+  border-radius: 15px;
+  background-color: #b5838D;
 }
 
 .top {
   padding: 10px;
-  background: #f1f1f1;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  background: #b5838D;
+  border-radius: 15px;
 }
 
 .content {
   padding: 10px;
+}
+
+.center {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
 }
