@@ -15,8 +15,9 @@ body {
   background-color: #ffcdb2;
 }
 
+
 .container {
-  border: 3px solid #e5989b;
+  /* border: 3px solid #e5989b; */
   /* border-radius: 15px; */
   background-color: #ffb4a2;
   
@@ -54,6 +55,7 @@ body {
   transition: all 0.3s ease;
   color: white;
   font-size: 36px;
+  filter: grayscale(100%);
 }
 
 .icon-bar a:hover {
