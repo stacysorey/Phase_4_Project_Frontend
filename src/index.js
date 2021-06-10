@@ -3,6 +3,7 @@ const journalForm = new JournalForm
 
 document.addEventListener("DOMContentLoaded", () => {
   cozyJournalAdapter.getJournals();
+  journalForm.listenEvents();
 })
 
 
