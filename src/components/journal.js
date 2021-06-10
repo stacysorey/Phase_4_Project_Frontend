@@ -18,6 +18,7 @@ class Journal {
       `<li id="journal-${this.id}" journal-id=${this.id}>
       <span>${this.title}</span>
       </li>`
+      
     )
   }
 
