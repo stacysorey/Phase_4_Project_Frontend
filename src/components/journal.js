@@ -15,8 +15,9 @@ class Journal {
 
   render() {
     return (
-      `<li id="journal-${this.id}" journal-id=${this.id}>
+      `<li id="data-${this.id}" data-id=${this.id}>
       <span>${this.title}</span>
+
       </li>`
       
     )
@@ -28,7 +29,7 @@ class Journal {
   }
 
   renderEntries() {
-    const li = document.getElementById(`journal-${this.id}`)
+    const li = document.getElementById(`data-${this.id}`)
     const ul = document.createElement('ul')
 
     this.entries.forEach(entry => ul.innerHTML += entry.render())
