@@ -23,6 +23,10 @@ body {
   
 }
 
+.container a {
+  filter: grayscale(100%);
+}
+
 .top {
   padding: 10px;
   background: #e5989b;
