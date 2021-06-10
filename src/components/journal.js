@@ -17,10 +17,11 @@ class Journal {
     return (
       `<li id="data-${this.id}" data-id=${this.id}>
       <span>${this.title}</span>
-      <button data-action='show'>Show Entries</button>
-      <button data-action='edit'>Edit Journal Title</button>
-      <button data-action='delete'>Delete Journal</button>
+      <a data-action='show'>&#128317;</a>
+      <a data-action='edit'>&#9997;</a>
+      <a data-action='delete'>&#10062;</a>
       </li>`
+      //add listen event for hover over buttons
     )
   }
 
