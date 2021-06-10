@@ -1,18 +1,29 @@
+/* COLOR PALETTE:
+apricot: #ffcdb2
+melon: #ffb4a2
+pastel pink: #e5989b
+english lavender: #b5838D
+old lavender: #6d6875 
+cornflower blue: #5C95FF*/
+
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ffcdb2;
 }
 
 .container {
-  border: 3px solid #b5838D;
-  border-radius: 15px;
-  background-color: #b5838D;
+  border: 3px solid #e5989b;
+  /* border-radius: 15px; */
+  background-color: #ffb4a2;
 }
 
 .top {
   padding: 10px;
-  background: #b5838D;
-  border-radius: 15px;
+  background: #e5989b;
+  /* border-radius: 15px; */
 }
 
 .content {
@@ -20,8 +31,11 @@ body {
 }
 
 .center {
-  display: inline;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   /* width: 50%; */
 }
+
+
+
