@@ -18,7 +18,11 @@ class JournalForm {
   handleSubmit(event){
     event.preventDefault();
     const titleInput = event.target[0]
+    if (editMode){
+      cozyJournalAdapter.editJournal(editMode, titleInput);
+    } else {
     cozyJournalAdapter.createJournal(titleInput);
+    }
   }
 
   listenEvents(){
@@ -39,7 +43,7 @@ class JournalForm {
         document.getElementById('title-submit').value = "Update"
         document.getElementById('title-input').value = li.children[0].innerText
         break;
-        
+
 
       case "show":
         console.log("show event")
