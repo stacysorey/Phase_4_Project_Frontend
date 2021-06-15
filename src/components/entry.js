@@ -14,8 +14,10 @@ class Entry {
 
   render() {
     return (
-      `<li entry-id=${this.id}><span>${this.title}</span><span>${this.date}</li>`
-      `<li entry-description=${this.description}</li>`
+      `<li data-id=${this.id}>
+      ${this.date}
+      ${this.title}<br>
+      ${this.description}</li>`
     )
   }
 }

@@ -46,8 +46,8 @@ class JournalForm {
 
 
       case "show":
-        if (createdEntries)
-        const j = Journal.all.find(j => j.id == li.dataset.id);
+        if (createdEntries) createdEntries.remove();
+        const j = Journal.all.find(j => j.id == li.dataset.id)
         j.renderEntries();
         break;
 
