@@ -1,0 +1,84 @@
+/* COLOR PALETTE:
+
+LIGHT:
+apricot: #ffcdb2
+melon: #ffb4a2
+pastel pink: #e5989b
+english lavender: #b5838D
+old lavender: #6d6875 
+cornflower blue: #5C95FF
+
+DARK:
+
+rich black: #0d1b2a
+oxford blue: #1b263b
+dark orchid: #9a48d0
+cornflower blue: #5C95FF
+beau blue: #c9daea
+
+*/
+
+
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ffcdb2;
+}
+
+
+.container {
+  /* border: 3px solid #e5989b; */
+  /* border-radius: 15px; */
+  background-color: #ffb4a2;
+  
+}
+
+.container a {
+  filter: grayscale(100%);
+}
+
+.top {
+  padding: 10px;
+  background: #e5989b;
+  /* border-radius: 15px; */
+}
+
+.content {
+  padding: 10px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+}
+
+.icon-bar {
+  width: 100%;
+  background-color: #6d6875;
+  overflow: auto;
+  padding-top: 20px;
+}
+
+.icon-bar a {
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+  filter: grayscale(100%);
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
