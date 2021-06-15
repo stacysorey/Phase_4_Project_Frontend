@@ -31,7 +31,7 @@ class JournalForm {
     const action = event.target.dataset.action;
     switch (action) {
       case "delete":
-        console.log("delete event")
+        cozyJournalAdapter.deleteJournal(li)
         break;
 
       case "edit":
