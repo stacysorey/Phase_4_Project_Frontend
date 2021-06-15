@@ -32,4 +32,28 @@ class CozyJournalAdapter {
     .catch(err => console.warn(err))
   }
 
+  createJournal(titleInput){
+    fetch(this.baseJournalURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        title: titleInput.value
+      })
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.status === 201){
+        const j = new Journal(data.journal)
+        j.addToDom()
+      } else {
+        alert(data.errors)
+      }
+      titleInput.value = ""
+    })
+    .catch(err => console.warn(err))
+  }
+
 }
