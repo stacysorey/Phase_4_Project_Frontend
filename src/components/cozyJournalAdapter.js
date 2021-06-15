@@ -32,6 +32,31 @@ class CozyJournalAdapter {
     .catch(err => console.warn(err))
   }
 
+  editJournal(editMode, titleInput){
+    fetch(`${this.baseJournalURL}/${editMode.dataset.id}`, {
+      method: "PATCH", 
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        title: titleInput.value
+      })
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.status === 204){
+        editMode.children[0].innerText = data.journal.title
+        editMode = false
+        document.getElementById('title-submit').value = "Create Journal"
+        titleInput.value = ""
+      } else {
+        alert(data.errors)
+      }
+    })
+    .catch(err => console.warn(err))
+  }
+
   createJournal(titleInput){
     fetch(this.baseJournalURL, {
       method: "POST",
