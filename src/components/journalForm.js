@@ -46,7 +46,9 @@ class JournalForm {
 
 
       case "show":
-        console.log("show event")
+        if (createdEntries)
+        const j = Journal.all.find(j => j.id == li.dataset.id);
+        j.renderEntries();
         break;
 
       default:
