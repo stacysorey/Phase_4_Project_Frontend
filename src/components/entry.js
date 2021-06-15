@@ -17,7 +17,10 @@ class Entry {
       `<li data-id=${this.id}>
       ${this.date}
       ${this.title}<br>
-      ${this.description}</li>`
+      ${this.description}
+      <a data-action='edit'>&#9997;</a>
+      <a data-action='delete'>&#10062;</a>
+      </li>`
     )
   }
 }
