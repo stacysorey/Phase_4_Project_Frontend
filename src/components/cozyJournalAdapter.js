@@ -56,4 +56,23 @@ class CozyJournalAdapter {
     .catch(err => console.warn(err))
   }
 
+  deleteJournal(li){
+    fetch(`${this.baseJournalURL}/${li.dataset.id}`,{
+      method: "DELETE"
+    })
+    .then(r => {
+      console.log(r)
+      return r.json()
+    })
+    .then(data => {
+      if (data.message === "Successfully deleted"){
+        // delete li for DOM
+        li.remove()
+      } else {
+        alert(data.message)
+      }
+    })
+    .catch(err => console.warn(err))
+  }
+
 }
