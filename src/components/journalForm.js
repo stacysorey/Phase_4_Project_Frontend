@@ -35,8 +35,11 @@ class JournalForm {
         break;
 
       case "edit":
-        console.log("edit event")
+        editMode = li;
+        document.getElementById('title-submit').value = "Update"
+        document.getElementById('title-input').value = li.children[0].innerText
         break;
+        
 
       case "show":
         console.log("show event")
