@@ -15,6 +15,12 @@ class JournalForm {
     form.addEventListener("submit", this.handleSubmit);
   }
 
+  handleSubmit(event){
+    event.preventDefault();
+    const titleInput = event.target[0]
+    cozyJournalAdapter.createJournal(titleInput);
+  }
+
   listenEvents(){
     const journalsContainer = document.getElementById("journals-container");
     journalsContainer.addEventListener("click", this.handleEvents);
