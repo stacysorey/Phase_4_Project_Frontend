@@ -22,6 +22,7 @@ class Journal {
       <a data-action='delete'>&#10062;</a>
       </li>`
       //add listen event for hover over buttons
+      
     )
   }
 

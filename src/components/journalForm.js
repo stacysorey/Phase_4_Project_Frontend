@@ -32,4 +32,7 @@ class JournalForm {
     }
   }
 
+
+  //hide new entry emoji when not in a journal
+  //add listenEvents for hover over menu items
 }
