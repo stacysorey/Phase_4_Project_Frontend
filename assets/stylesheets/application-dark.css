@@ -23,15 +23,15 @@ body {
   margin:0;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: #ffffff;
-  background-color: #ffcdb2;
+  color: #c9daea;
+  background-color: #0d1b2a;
 }
 
 
 .container {
   /* border: 3px solid #e5989b; */
   /* border-radius: 15px; */
-  background-color: #ffb4a2;
+  background-color: #1b263b;
   
 }
 
@@ -41,7 +41,7 @@ body {
 
 .top {
   padding: 10px;
-  background: #e5989b;
+  background: #5C95FF;
   /* border-radius: 15px; */
 }
 
@@ -58,7 +58,7 @@ body {
 
 .icon-bar {
   width: 100%;
-  background-color: #6d6875;
+  background-color: #0d1b2a;
   overflow: auto;
   padding-top: 20px;
 }
