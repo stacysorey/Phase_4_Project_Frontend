@@ -6,6 +6,10 @@ class JournalForm {
     this.handleEvents = this.handleEvents.bind(this);
   }
 
+  addCreateForm(){
+    const formContainer = document.getElementById("form-container");
+  }
+
   listenEvents(){
     const journalsContainer = document.getElementById("journals-container");
     journalsContainer.addEventListener("click", this.handleEvents);
