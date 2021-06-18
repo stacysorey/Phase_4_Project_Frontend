@@ -1,5 +1,6 @@
 let editMode = false
 let createdEntries = false
+const cozyEntryAdapter = new CozyEntryAdapter("http://localhost:3000")
 const cozyJournalAdapter = new CozyJournalAdapter("http://localhost:3000")
 const journalForm = new JournalForm
 const entryForm = new EntryForm
