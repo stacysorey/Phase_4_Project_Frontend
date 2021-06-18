@@ -11,7 +11,7 @@ body {
   margin:0;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000 ;
   background-color: #ffcdb2;
 }
 
@@ -46,7 +46,7 @@ body {
 
 .icon-bar {
   width: 100%;
-  background-color: #6d6875;
+  background-color: #b5838D;
   overflow: auto;
   padding-top: 20px;
 }

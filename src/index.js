@@ -12,13 +12,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function toggle() {
   const toggbtn = document.getElementById("toggle-mode")
-  const el = document.getElementById("style1");
+  const logo = document.getElementById("logo-container")
+  const lightMode = document.getElementById("style1");
 
   toggbtn.addEventListener("click", () => {
-    if (el.href.match("assets/stylesheets/application-light.css")) {
-      el.href = "assets/stylesheets/application-dark.css";
+    if (lightMode.href.match("assets/stylesheets/application-light.css")) {
+      lightMode.href = "assets/stylesheets/application-dark.css";
+      
     } else {
-        el.href = "assets/stylesheets/application-light.css";
+      lightMode.href = "assets/stylesheets/application-light.css";
+    
     }
   })
   

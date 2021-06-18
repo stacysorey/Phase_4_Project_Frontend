@@ -23,15 +23,15 @@ body {
   margin:0;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: #c9daea;
-  background-color: #0d1b2a;
+  color: #ffffff;
+  background-color: #778DA9;
 }
 
 
 .container {
   /* border: 3px solid #e5989b; */
   /* border-radius: 15px; */
-  background-color: #1b263b;
+  background-color: #415A77;
   
 }
 
@@ -41,7 +41,7 @@ body {
 
 .top {
   padding: 10px;
-  background: #5C95FF;
+  background: #1b263b;
   /* border-radius: 15px; */
 }
 
