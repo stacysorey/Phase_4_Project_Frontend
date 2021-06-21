@@ -8,6 +8,7 @@ class Journal {
     this.id = id
     this.title = title
     this.entries = entries.map(entry => new Entry(entry))
+    //error on .map
 
     Journal.all.push(this)
   }
@@ -17,9 +18,11 @@ class Journal {
     return (
       `<li id="data-${this.id}" data-id=${this.id}>
       <span>${this.title}</span>
-      <a data-action='show'>&#128317;</a>
       <a data-action='edit'>&#9997;</a>
+      <a data-action='new'>&#10133;</a>
       <a data-action='delete'>&#10062;</a>
+      <a data-action='show'>&#128317;</a>
+      <a data-action='hide'>&#128316;</a>
       </li>`
       //add listen event for hover over buttons
       

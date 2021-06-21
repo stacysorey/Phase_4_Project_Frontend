@@ -11,6 +11,7 @@ body {
   margin:0;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  font-size: 20px;
   color: #000000 ;
   background-color: #ffcdb2;
 }
@@ -41,14 +42,14 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  /* width: 50%; */
+  width: 50%;
 }
 
 .icon-bar {
   width: 100%;
-  background-color: #b5838D;
   overflow: auto;
   padding-top: 20px;
+  margin-left: 80%;
 }
 
 .icon-bar a {

@@ -16,12 +16,12 @@
 class CozyJournalAdapter {
 
   constructor(baseURL) {
-    this.baseJournalURL = `${baseURL}/api/v1/journals`
+    this.baseURL = `${baseURL}/api/v1/journals`;
   }
 
   getJournals(){
     
-    fetch(this.baseJournalURL)
+    fetch(this.baseURL)
     .then(r => r.json())
     .then(journals => {
       journals.forEach(journal => {    
@@ -33,7 +33,7 @@ class CozyJournalAdapter {
   }
 
   editJournal(editMode, titleInput){
-    fetch(`${this.baseJournalURL}/${editMode.dataset.id}`, {
+    fetch(`${this.baseURL}/${editMode.dataset.id}`, {
       method: "PATCH", 
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ class CozyJournalAdapter {
   }
 
   createJournal(titleInput){
-    fetch(this.baseJournalURL, {
+    fetch(this.baseURL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -82,7 +82,7 @@ class CozyJournalAdapter {
   }
 
   deleteJournal(li){
-    fetch(`${this.baseJournalURL}/${li.dataset.id}`,{
+    fetch(`${this.baseURL}/${li.dataset.id}`,{
       method: "DELETE"
     })
     .then(r => {

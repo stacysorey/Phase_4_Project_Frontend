@@ -7,10 +7,12 @@ class JournalForm {
   }
 
   addCreateForm(){
-    const formContainer = document.getElementById("form-container");
+    const formContainer = document.getElementById("f-container");
     const form = document.createElement('form');
-    form.innerHTML = `<input id="title-input" placeholder='title' type='text'/>
-    <input id="title-submit" value='Create Journal' type='submit'/>`
+    form.innerHTML = 
+      `<a style="font-size:35px">&#128211;</a>  
+      <input id="title-input" placeholder='  create new journal' type='text' style="font-size:30px; border-radius:50px"/>
+      <input id="title-submit" value='&#10133' type='submit' style="font-size:20px; border-radius:25px"/>`
     formContainer.append(form);
     form.addEventListener("submit", this.handleSubmit);
   }
@@ -24,6 +26,7 @@ class JournalForm {
     cozyJournalAdapter.createJournal(titleInput);
     }
   }
+
 
   listenEvents(){
     const journalsContainer = document.getElementById("journals-container");
@@ -45,6 +48,10 @@ class JournalForm {
         document.getElementById('title-input').value = li.children[0].innerText
         break;
 
+      case "new":
+        console.log("new entry!");
+        
+        break;
 
       case "show":
         if (createdEntries) createdEntries.remove();
@@ -52,10 +59,18 @@ class JournalForm {
         j.renderEntries();
         break;
 
+      case "hide":
+        if (createdEntries) createdEntries.remove();
+        //exits out if clicked on other entries
+        break;
+
       default:
         break;
     }
   }
+
+  
+  
 
 
   //hide new entry emoji when not in a journal
