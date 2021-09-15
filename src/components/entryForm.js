@@ -9,5 +9,5 @@ class EntryForm {
   //   form.addEventListener("submit", this.handleSubmit);
   // }
 
-  
+ 
 }

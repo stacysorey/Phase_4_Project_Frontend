@@ -11,7 +11,7 @@ class JournalForm {
     const form = document.createElement('form');
     form.innerHTML = 
       `<a style="font-size:35px">&#128211;</a>  
-      <input id="title-input" placeholder='  create new journal' type='text' style="font-size:30px; border-radius:50px"/>
+      <input id="title-input" placeholder='  create new journal' type='text' style="font-size:20px; border-radius:30px"/>
       <input id="title-submit" value='&#10133' type='submit' style="font-size:20px; border-radius:25px"/>`
     formContainer.append(form);
     form.addEventListener("submit", this.handleSubmit);
@@ -49,14 +49,18 @@ class JournalForm {
         break;
 
       case "new":
+        const j = Journal.all.find(j => j.id == li.dataset.id)
         console.log("new entry!");
+        j.renderNewForm();
+        
+        //form.addEventListener("submit", this.handleSubmit);
         
         break;
 
       case "show":
         if (createdEntries) createdEntries.remove();
-        const j = Journal.all.find(j => j.id == li.dataset.id)
-        j.renderEntries();
+        const journal = Journal.all.find(j => j.id == li.dataset.id)
+        journal.renderEntries();
         break;
 
       case "hide":

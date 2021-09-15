@@ -24,7 +24,7 @@ class Journal {
       <a data-action='show'>&#128317;</a>
       <a data-action='hide'>&#128316;</a>
       </li>`
-      //add listen event for hover over buttons
+      //add listen event for hover over buttons to show what it is
       
     )
   }
@@ -42,4 +42,30 @@ class Journal {
     li.append(ul)
     createdEntries = ul
   }
+  
+  renderNewForm(){
+    const li = document.getElementById(`data-${this.id}`)
+    const entryForm = document.createElement('form');
+        entryForm.innerHTML = 
+        `<input id="title-input" placeholder='title' type='text'/>
+        <input id="description-input" placeholder='description' type='text'/>
+        <input id="date-input" placeholder='date' type='date'/>
+        <input id="title-submit" value='Create Entry' type='submit'/>`
+        li.append(entryForm);
+        console.log(this)
+        entryForm.addEventListener('submit', this.handleNewEntry.bind(this))
+  }
+
+  handleNewEntry(event) {
+    event.preventDefault();
+    const title = event.target[0].value
+    const description = event.target[1].value
+    const date = event.target[2].value
+    const journalID = this.id
+    const entryAttr= {title: title, description: description, date: date, journal_id: journalID}
+    cozyEntryAdapter.getEntries(entryAttr)
+    //delete form
+  }
 }
+
+//delete form out of the DOM
