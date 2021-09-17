@@ -47,7 +47,7 @@ class Journal {
     const li = document.getElementById(`data-${this.id}`)
     const entryForm = document.createElement('form');
         entryForm.innerHTML = 
-        `<input id="title-input" placeholder='title' type='text'/>
+        `<input id="entry-title-input" placeholder='title' type='text'/>
         <input id="description-input" placeholder='description' type='text'/>
         <input id="date-input" placeholder='date' type='date'/>
         <input id="title-submit" value='Create Entry' type='submit'/>`

@@ -27,6 +27,18 @@ class JournalForm {
     }
   }
 
+  // handleEntrySubmit(event){
+  //   event.preventDefault();
+  //   const titleInput = event.target[0]
+  //   const descInput = event.target[1]
+  //   const dateInput = event.target[2]
+  //   if (editMode){
+  //     cozyEntryAdapter.editEntry(editMode, titleInput, descInput, dateInput);
+  //   } else {
+  //   journal.handleNewEntry(titleInput, descInput, dateInput);
+  //   }
+  // }
+
 
   listenEvents(){
     const journalsContainer = document.getElementById("journals-container");
@@ -42,10 +54,19 @@ class JournalForm {
         cozyJournalAdapter.deleteJournal(li)
         break;
 
+      case "delete_entry": 
+        console.log("deleting entry!")
+        break;
+
       case "edit":
+        console.log("editing journal!")
         editMode = li;
         document.getElementById('title-submit').value = "Update"
         document.getElementById('title-input').value = li.children[0].innerText
+        break;
+
+      case "edit_entry":
+        console.log("editing entry!")
         break;
 
       case "new":
