@@ -1,20 +1,7 @@
 //handles all fetch requests
 
-// function fetchJournals(){
-//   const journalsContainer = document.getElementById("journals-container")
-
-//   fetch("http://localhost:3000/api/v1/journals")
-//   .then(r => r.json())
-//   .then(data => {
-//       data.forEach(function(journal){
-//           journalsContainer.innerHTML += `<li>${journal.title}</li>`
-//       })
-//   })
-//   .catch(err => console.warn(err))
-// }
-
 class CozyJournalAdapter {
-
+  
   constructor(baseURL) {
     this.baseURL = `${baseURL}/api/v1/journals`;
   }
@@ -31,7 +18,7 @@ class CozyJournalAdapter {
     })
     .catch(err => console.warn(err))
   }
-
+  
   editJournal(editMode, titleInput){
     fetch(`${this.baseURL}/${editMode.dataset.id}`, {
       method: "PATCH", 
@@ -56,7 +43,7 @@ class CozyJournalAdapter {
     })
     .catch(err => console.warn(err))
   }
-
+  
   createJournal(titleInput){
     fetch(this.baseURL, {
       method: "POST",
@@ -80,8 +67,9 @@ class CozyJournalAdapter {
     })
     .catch(err => console.warn(err))
   }
-
+  
   deleteJournal(li){
+    // "undefined" ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed):app/controllers/api/v1/journals_controller.rb:61:in `destroy' 
     fetch(`${this.baseURL}/${li.dataset.id}`,{
       method: "DELETE"
     })
@@ -99,5 +87,22 @@ class CozyJournalAdapter {
     })
     .catch(err => console.warn(err))
   }
-
+  
 }
+
+
+
+
+
+// function fetchJournals(){
+//   const journalsContainer = document.getElementById("journals-container")
+
+//   fetch("http://localhost:3000/api/v1/journals")
+//   .then(r => r.json())
+//   .then(data => {
+//       data.forEach(function(journal){
+//           journalsContainer.innerHTML += `<li>${journal.title}</li>`
+//       })
+//   })
+//   .catch(err => console.warn(err))
+// }
