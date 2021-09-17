@@ -20,8 +20,8 @@ class CozyEntryAdapter {
       .then(r => r.json())
       .then(data => {
         console.log(data);
-          let entry = new Entry(data.id, data.title, data.description, data.date);
-          entry.addToDom(); //not a function
+          // let entry = new Entry(data.id, data.title, data.description, data.date);
+          // entry.addToDom(); //not a function
         // const j = new Journal(journal) 
         // j.addToDom()    EXAMPLE
   } )

@@ -1,5 +1,6 @@
 const baseURL = "http://localhost:3000/"
 let editMode = false
+let editEntryMode = false
 let createdEntries = false
 const cozyEntryAdapter = new CozyEntryAdapter(baseURL)
 const cozyJournalAdapter = new CozyJournalAdapter(baseURL)

@@ -18,9 +18,9 @@ class Entry {
       ${this.date}
       ${this.title}<br>
       ${this.description}
-      <a data-action='edit_entry'>&#9997;</a>
       <a data-action='delete_entry'>&#10062;</a>
       </li>`
+      // <a data-action='edit_entry'>&#9997;</a>
     )
   }
 }

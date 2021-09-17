@@ -65,9 +65,14 @@ class JournalForm {
         document.getElementById('title-input').value = li.children[0].innerText
         break;
 
-      case "edit_entry":
-        console.log("editing entry!")
-        break;
+      // case "edit_entry":
+      //   console.log("editing entry!")
+      //   editEntryMode = li;
+      //   document.getElementById('entry-title-submit').value = "Update"
+      //   // document.getElementById('entry-title-input').value = li.children[0].innerText
+      //   // document.getElementById('entry-description-input').value = li.children[1].innerText
+      //   // document.getElementById('entry-date-input').value = li.children[2]
+      //   break;
 
       case "new":
         const j = Journal.all.find(j => j.id == li.dataset.id)

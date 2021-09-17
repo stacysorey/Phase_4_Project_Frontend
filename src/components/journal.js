@@ -48,9 +48,9 @@ class Journal {
     const entryForm = document.createElement('form');
         entryForm.innerHTML = 
         `<input id="entry-title-input" placeholder='title' type='text'/>
-        <input id="description-input" placeholder='description' type='text'/>
-        <input id="date-input" placeholder='date' type='date'/>
-        <input id="title-submit" value='Create Entry' type='submit'/>`
+        <input id="entry-description-input" placeholder='description' type='text'/>
+        <input id="entry-date-input" placeholder='date' type='date'/>
+        <input id="entry-title-submit" value='Create Entry' type='submit'/>`
         li.append(entryForm);
         console.log(this)
         entryForm.addEventListener('submit', this.handleNewEntry.bind(this))
@@ -65,6 +65,11 @@ class Journal {
     const entryAttr= {title: title, description: description, date: date, journal_id: journalID}
     cozyEntryAdapter.getEntries(entryAttr)
     //delete form
+    // if (editEntryMode){
+    //   cozyEntryAdapter.editEntry(editEntryMode, entryAttr);
+    // } else {
+    //   cozyEntryAdapter.createEntry(entryAttr);
+    // }
   }
 }
 
