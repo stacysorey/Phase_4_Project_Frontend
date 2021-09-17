@@ -78,6 +78,7 @@ class CozyJournalAdapter {
       return r.json()
     })
     .then(data => {
+      console.log(data);
       if (data.message === "Successfully deleted"){
         // delete li for DOM
         li.remove()

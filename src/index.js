@@ -10,7 +10,7 @@ const journalForm = new JournalForm
 document.addEventListener("DOMContentLoaded", () => {
   journalForm.addCreateForm();
   cozyJournalAdapter.getJournals();
-  cozyEntryAdapter.getEntries();
+  //cozyEntryAdapter.getEntries();
   journalForm.listenEvents();
   toggle();
 })
